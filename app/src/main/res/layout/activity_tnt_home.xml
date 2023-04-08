@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".TntHomeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTntHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_row="1"
+        android:layout_rowWeight="1"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        app:cardBackgroundColor="#00ffffff"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+        <GridLayout
+            android:layout_width="333dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleHome"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:columnCount="2"
+            android:rowCount="1">
+
+            <ImageView
+                android:id="@+id/homeBtn"
+                android:layout_width="29dp"
+                android:layout_height="37dp"
+                android:src="@drawable/home_bg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="302dp"
+                    android:layout_height="586dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:textColorHint="@color/colorWhite"
+                    android:textColor="@color/colorWhite"
+                    android:shadowColor="@color/teal_200"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="10"
+                    android:text="Welcome, to the Ticks -N- Tokens reviews application. \n\nThis is a platform for parents to track child(ren) behaviour and award/ discipline by use of handing out Ticks for child(ren) bad behaviour and or handing out tokens for good behaviour. \n\nThis program is designed to act as a guide to keeping your child(ren) on task, and provide a space where both the parent(s) and child(ren) have a voice on the expected outcome. \n\nRules: \n\nParent(s) and child(ren) agree on a number, the number agreed upon is the deciding factor of whether or not the child(ren) meets expectations or not. \n \nIf the child(ren) reaches the agreed upon amount of token(s) within (1) weeks time, then the agreed upon award will be provided to the child(ren). If the child(ren) do not meet the agreed upon number it is status quo, and the new week begins without receiving an award. \n\nIf the child(ren) reaches the agreed upon amount of tick(s) within (1) weeks time, then the agreed upon punishment will be provided to the child(ren). If the child(ren) do not meet the agreed upon number it is status quo, and the new week begins without receiving a punishment."
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </GridLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

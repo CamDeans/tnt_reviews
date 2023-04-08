@@ -3,12 +3,20 @@ package deans.cameron.ticks_n_tokens_reviews;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -41,6 +49,26 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomeActivity.this, TntHomeActivity.class));
+            }
+        });
+
+        // create functionality of AddDetails
+        // new AddDetailsActivity created
+        CardView addDetails = findViewById(R.id.cardAddDetails);
+        addDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, AddDetailsActivity.class));
+            }
+        });
+
+        // create functionality of CardReviews
+        // new CardReviewsActivity created
+        CardView reviews = findViewById(R.id.cardReviews);
+        reviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, ReviewActivity.class));
             }
         });
     }

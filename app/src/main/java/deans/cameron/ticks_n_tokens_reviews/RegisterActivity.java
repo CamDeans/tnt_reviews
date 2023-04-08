@@ -22,11 +22,11 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         // create object
-        edUsername = findViewById(R.id.editTextRegUsername);
+        edUsername = findViewById(R.id.editTextChildName);
         edEmail = findViewById(R.id.editTextRegEmail);
         edPassword = findViewById(R.id.editTextRegPassword);
         edConfirm = findViewById(R.id.editTextRegConfirmPassword);
-        btn = findViewById(R.id.buttonRegister);
+        btn = findViewById(R.id.buttonUpdateDetails);
         tv = findViewById(R.id.textViewExistingUser);
 
         // set event to handle moving to a new activity
@@ -90,7 +90,7 @@ public class RegisterActivity extends AppCompatActivity {
     //
     public void register(String username, String email, String password) {
         UserData userData = new UserData(username, email, password);
-        DataDB dataDB = DataDB.getInstance(this);
-        dataDB.userDataDAO().insert(userData);
+        UserDataDB userDataDB = UserDataDB.getInstance(this);
+        userDataDB.userDataDAO().insert(userData);
     }
 }

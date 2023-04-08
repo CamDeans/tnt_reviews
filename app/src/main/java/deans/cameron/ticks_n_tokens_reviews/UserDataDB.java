@@ -6,17 +6,17 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities={Data.class, UserData.class}, version = 1, exportSchema = false)
-public abstract class DataDB extends RoomDatabase {
-    public static  final String DB_NAME = "data_db";
+@Database(entities={UserData.class}, version = 1, exportSchema = false)
+public abstract class UserDataDB extends RoomDatabase {
+    public static  final String DB_NAME = "user_data_db";
 
-    private static DataDB  INSTANCE = null;
+    private static UserDataDB  INSTANCE = null;
 
-    public static DataDB getInstance(Context context) {
-        if (INSTANCE==null) synchronized (DataDB.class) {
+    public static UserDataDB getInstance(Context context) {
+        if (INSTANCE==null) synchronized (UserDataDB.class) {
             INSTANCE = Room.databaseBuilder(
                             context.getApplicationContext(),
-                            DataDB.class,
+                            UserDataDB.class,
                             DB_NAME
                     )
                     .allowMainThreadQueries()
@@ -24,6 +24,6 @@ public abstract class DataDB extends RoomDatabase {
         }
         return  INSTANCE;
     }
-    public abstract DataDAO dataDAO();
+
     public abstract UserDataDAO userDataDAO();
 }
