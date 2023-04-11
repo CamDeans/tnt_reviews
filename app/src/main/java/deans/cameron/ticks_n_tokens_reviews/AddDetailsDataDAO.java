@@ -21,6 +21,6 @@ public interface AddDetailsDataDAO {
     @Query("DELETE FROM adddetailsdata")
     void deleteAll();
 
-    @Query("DELETE FROM adddetailsdata WHERE addDetailsId = :addDetailsId")
-    void delete(int addDetailsId);
+    @Query("DELETE FROM adddetailsdata WHERE childName = :childName")
+    void delete(String childName);
 }

@@ -21,6 +21,9 @@ public class UserData {
     @Ignore
     public UserData(int userId){this.userId = userId; }
 
+    @Ignore
+    public UserData(String password){this.password = password;}
+
     public int getUserId() {
         return userId;
     }

@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     // initialize parameters
     EditText edUsername, edPassword;
     Button btn;
-    TextView tv;
+    TextView tv, tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         edPassword = findViewById(R.id.editTextLoginPassword);
         btn = findViewById(R.id.buttonLogin);
         tv = findViewById(R.id.textViewNewUser);
+        tv1 = findViewById(R.id.textViewForgotPassword);
 
         // set event to handle user input
         btn.setOnClickListener(view -> {
@@ -54,12 +55,15 @@ public class LoginActivity extends AppCompatActivity {
                     // TO save our data with key and value
                     editor.apply();
                     startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-                }
+                } else
+                    Toast.makeText(getApplicationContext(), "Incorrect Username or Password, please re-enter!", Toast.LENGTH_SHORT).show();
             }
         });
 
         // set event to handle moving to a new activity
         tv.setOnClickListener(view -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
+        // set event to handle moving to a new activity
+        tv1.setOnClickListener(view -> startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class)));
     }
 
     //

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -46,11 +47,11 @@ public class ShowReviewActivity extends AppCompatActivity {
         btnDeleteOne.setOnClickListener(view -> {
             AddDetailsDataDB addDetailsDataDB = AddDetailsDataDB.getInstance(this);
             AddDetailsData addDetailsData = new AddDetailsData();
-            addDetailsData.setAddDetailsId(1);
-            int isIdForDeletion = addDetailsData.getAddDetailsId();
-            Log.i("Is ID - ", "ID for deletion: ", new Throwable(String.valueOf(isIdForDeletion)));
-            addDetailsDataDB.addDetailsDataDAO().delete((isIdForDeletion));
+            addDetailsData.setChildName("Nathan");
+            String isChildNameForDeletion = addDetailsData.getChildName();
+            addDetailsDataDB.addDetailsDataDAO().delete((isChildNameForDeletion));
             startActivity(new Intent(ShowReviewActivity.this, ShowReviewActivity.class));
+            Toast.makeText(getApplicationContext(), "Delete Nathan Successful!", Toast.LENGTH_SHORT).show();
         });
 
         // Define the runnable that will update the user interface
