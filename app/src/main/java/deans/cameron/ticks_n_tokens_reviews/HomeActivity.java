@@ -71,5 +71,15 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this, ReviewActivity.class));
             }
         });
+
+        // create functionality of CardReviews
+        // new CardReviewsActivity created
+        CardView calendar = findViewById(R.id.cardCalendar);
+        calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, CalendarActivity.class));
+            }
+        });
     }
 }
