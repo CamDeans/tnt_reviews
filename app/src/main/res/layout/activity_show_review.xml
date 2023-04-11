@@ -20,14 +20,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ListView
         android:id="@+id/listView"
-        android:layout_width="410dp"
-        android:layout_height="692dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="412dp"
+        android:layout_height="449dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="192dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonDeleteOne"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="637dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/btn_bg"
+        android:shadowColor="@color/teal_200"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="10"
+        android:text="Delete Child Name"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDeleteAll"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="564dp"
+        android:layout_marginBottom="119dp"
+        android:background="@drawable/btn_bg"
+        android:shadowColor="@color/teal_200"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="10"
+        android:text="Delete All"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

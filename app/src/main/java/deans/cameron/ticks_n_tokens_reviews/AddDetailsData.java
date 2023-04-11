@@ -40,6 +40,12 @@ public class AddDetailsData {
     @Ignore
     public AddDetailsData(int addDetailsId){this.addDetailsId = addDetailsId; }
 
+    @Ignore
+    public AddDetailsData(String childName) {this.childName = childName;}
+
+    @Ignore
+    public AddDetailsData() {}
+
     public int getAddDetailsId() {
         return addDetailsId;
     }
