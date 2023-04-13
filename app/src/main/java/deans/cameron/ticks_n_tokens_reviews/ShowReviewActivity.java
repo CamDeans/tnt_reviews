@@ -25,7 +25,6 @@ public class ShowReviewActivity extends AppCompatActivity {
 
     // Define a List object that will contain data retrieved from the database.
     List<AddDetailsData> addDetailsDataList = null;
-    List<AddReviewDetailsData> addReviewDetailsDataList = null;
 
     @SuppressLint("MissingInflatedId")
     @Override
