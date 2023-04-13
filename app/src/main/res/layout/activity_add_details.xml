@@ -188,7 +188,7 @@
             android:background="@drawable/input_bg"
             android:drawablePadding="10dp"
             android:ems="10"
-            android:hint="TNT Number Selection"
+            android:hint="Goal"
             android:inputType="number"
             android:minHeight="48dp"
             android:paddingLeft="20dp"

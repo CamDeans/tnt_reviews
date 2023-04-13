@@ -19,6 +19,7 @@ public abstract class AddDetailsDataDB extends RoomDatabase {
                             AddDetailsDataDB.class,
                             DB_NAME
                     )
+                    .fallbackToDestructiveMigration()
                     .allowMainThreadQueries()
                     .build();
         }

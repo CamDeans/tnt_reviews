@@ -44,7 +44,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TNT HOME"
+                    android:text="WELCOME"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:shadowColor="@color/teal_200"
@@ -82,7 +82,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ADD DETAILS"
+                    android:text="ADD\nDETAILS"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:shadowColor="@color/teal_200"
@@ -113,6 +113,7 @@
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:gravity="center"
                 android:orientation="vertical" >
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -120,7 +121,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MY REVIEWS"
+                    android:text="CHILD\nDETAILS"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:shadowColor="@color/teal_200"
@@ -158,7 +159,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CALENDAR"
+                    android:text="ADD\nREVIEW\nBY DAY"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:shadowColor="@color/teal_200"
@@ -196,7 +197,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SEARCH"
+                    android:text="CHILD\nREVIEWS"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:shadowColor="@color/teal_200"

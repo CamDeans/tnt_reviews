@@ -84,6 +84,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".ShowReview2Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="false">
             <meta-data
@@ -92,6 +99,13 @@
         </activity>
         <activity
             android:name=".ReviewActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Review2Activity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

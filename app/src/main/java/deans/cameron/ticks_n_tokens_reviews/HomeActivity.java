@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         // create functionality of CardReviews
-        // new CardReviewsActivity created
+        // new reviewsActivity created
         CardView reviews = findViewById(R.id.cardReviews);
         reviews.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,13 +72,23 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        // create functionality of CardReviews
-        // new CardReviewsActivity created
+        // create functionality of Calendar
+        // new CalendarActivity created
         CardView calendar = findViewById(R.id.cardCalendar);
         calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomeActivity.this, CalendarActivity.class));
+            }
+        });
+
+        // create functionality of Search
+        // new Review2Activity created
+        CardView search = findViewById(R.id.cardSearch);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, Review2Activity.class));
             }
         });
     }

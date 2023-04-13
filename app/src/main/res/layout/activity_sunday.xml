@@ -4,6 +4,206 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SundayActivity">
+    android:background="@drawable/profile"
+    tools:context=".SundayActivity" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:backgroundTint="#00ffffff"
+        android:weightSum="100" >
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSundayReviews"
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardBackgroundColor="#00ffffff"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/homeBtn"
+                android:layout_width="29dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="366dp"
+                android:layout_marginBottom="692dp"
+                android:src="@drawable/home_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <GridLayout
+                android:layout_width="333dp"
+                android:layout_height="320dp"
+                android:layout_below="@+id/titleHome"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:columnCount="3"
+                android:rowCount="1">
+
+                <ImageView
+                    android:layout_width="29dp"
+                    android:layout_height="37dp" />
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/isSundayTickCountLabel"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:hint="Tick Count"
+                        android:shadowColor="@color/teal_200"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="10"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/isSundayTickCountLabelBlank"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:id="@+id/isSundayTokenCountLabel"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:hint="Token Count"
+                        android:shadowColor="@color/teal_200"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="10"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/isSundayTokenCountLabelBlank"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp" />
+
+
+                    <TextView
+                        android:id="@+id/isSundayReviewLabel"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/textview2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Review"
+                        android:shadowColor="@color/teal_200"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="10"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/isSundayTickIncreaseBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:hint="+"
+                        android:shadowColor="@color/teal_200"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="10"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite" />
+
+                    <Button
+                        android:id="@+id/isSundayTickDecreaseBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:hint="-"
+                        android:shadowColor="@color/teal_200"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="10"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite" />
+
+                    <Button
+                        android:id="@+id/isSundayTokenIncreaseBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:hint="+"
+                        android:shadowColor="@color/teal_200"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="10"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite" />
+
+                    <Button
+                        android:id="@+id/isSundayTokenDecreaseBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:hint="-"
+                        android:shadowColor="@color/teal_200"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="10"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite" />
+
+                    <EditText
+                        android:id="@+id/isEditTextSundayReview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:hint="Message"
+                        android:shadowColor="@color/teal_200"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="10"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite" />
+
+                    <Button
+                        android:id="@+id/isSundayAddReviewBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:hint="Add Review"
+                        android:shadowColor="@color/teal_200"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="10"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite" />
+                </LinearLayout>
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
